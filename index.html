@@ -75,7 +75,8 @@
         var yearcolor=document.getElementById("year")
         var minut2=document.getElementById("minut")
         var second2=document.getElementById("second")
-        var color=document.getElementById("center3")
+        var color=document.getElementById("daytext")
+        var daytextcolor=document.getElementById("daytext")
        
         setInterval(function(){
            var randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -92,6 +93,7 @@
                second2.style.background="#"+randomColor
                yearcolor.style.background="#"+randomColor
                minut2.style.color="#"+randomColor
+               daytextcolor.style.color="#"+randomColor
                daycolor.style.color="#"+randomColor
          },1000);
         
