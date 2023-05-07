@@ -5,9 +5,12 @@
 body{
     font-family: myFirstFont;
 }
-.container{
-   
+.texttitle{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
+
 .container .center{
     position: fixed;
     left: 50%;
@@ -106,7 +109,7 @@ body{
     justify-content: center;
     justify-content: center;
     top: 90%;
-    height: 160px;
+    height: 200px;
     width: 500px;
     background-color:  rgba(0, 0, 0, 0.8);
     margin-top: -180px;
@@ -131,6 +134,10 @@ body{
     font-size: 25px;
     font-weight: 500;
     background-color: lightcoral;
+    transition: ease-in .50s;
+}
+.first input:hover{
+    transform: scale(0.8);
 }
 .second{
  margin-top: -50px;
