@@ -54,7 +54,8 @@
     </div>
     <script>
 
-        document.r
+        var audio = new Audio('Welcome.mp3');
+                     audio.play();
        
          var maintimer=document.getElementById("maintimer")
          var timer=document.getElementById("timer")
@@ -124,6 +125,7 @@
         var stop=document.getElementById("stop")
         stop.addEventListener("click",function(){
             var audio = new Audio('stopbeep.mp3');
+            navigator.vibrate(200);
             audio.play();
             clearInterval(inter)
             start.disabled=false
