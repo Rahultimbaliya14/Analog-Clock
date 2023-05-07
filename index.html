@@ -72,6 +72,7 @@
          var start=document.getElementById("start")
          
          start.addEventListener("click",function(){
+            navigator.vibrate(200);
             start.disabled=true
             stop.disabled=false
             var get=parseInt(timer.innerHTML)
@@ -79,6 +80,10 @@
              tcount=get*60
              }
             inter=setInterval(function(){
+                if(tcount==10) {
+                    var audio = new Audio('tiktik.mp3');
+                     audio.play();
+                }
                 if(tcount>=0)   {
                 maintimer.innerHTML=tcount
                 tcount-=1
