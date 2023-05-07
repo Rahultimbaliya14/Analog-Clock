@@ -60,16 +60,30 @@
             var minut=document.getElementById("minut").innerHTML=minut
             var second=document.getElementById("second").innerHTML=second   
             var ampm=document.getElementById("ampm").innerHTML=ampm   
-
+             
             var daytext=document.getElementById("day").innerHTML=day    
             var monthtext=document.getElementById("month").innerHTML=month    
             var yeartext=document.getElementById("year").innerHTML=year         
             var daytextt=document.getElementById("daytext").innerHTML=daytexttr        
             
+            
+
         },1000)
-       
+    
+        var minut2=document.getElementById("minut")
+        var second2=document.getElementById("second")
+        setInterval(function(){
+           var randomColor = Math.floor(Math.random()*16777215).toString(16);
+              second2.style.color="#"+randomColor
+              minut2.style.background="#"+randomColor
 
-
+        },1000);
+        setInterval(function(){
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+               second2.style.background="#"+randomColor
+               minut2.style.color="#"+randomColor
+         },1000);
+        
 
         function getdaytext(n){
             var daytext

@@ -31,8 +31,10 @@ body{
    border-radius: 10px;
    background-color: white;
    margin-left: 20px;
-   transition: .50s;
+   transition: ease-in .50s;
 }
+
+
 
 .container .center1{
     position: fixed;
@@ -61,7 +63,7 @@ body{
    border-radius: 10px;
    background-color: white;
    margin-left: 20px;
-   transition: .50s;
+   transition: ease-in .50s;
 }
 
 .container .center h2{
