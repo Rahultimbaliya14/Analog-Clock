@@ -54,8 +54,8 @@
     </div>
     <script>
 
-        var audio = new Audio('Welcome.mp3');
-                     audio.play();
+        var audio1 = new Audio('Welcome.mp3');
+                     audio1.play();
        
          var maintimer=document.getElementById("maintimer")
          var timer=document.getElementById("timer")
@@ -73,8 +73,8 @@
          var start=document.getElementById("start")
          
          start.addEventListener("click",function(){
-            var audio = new Audio('letsgo.mp3');
-            audio.play();
+            var audio2 = new Audio('letsgo.mp3');
+            audio2.play();
             navigator.vibrate(200);
             start.disabled=true
             stop.disabled=false
@@ -84,16 +84,16 @@
              }
             inter=setInterval(function(){
                 if(tcount==10) {
-                    var audio = new Audio('tiktik.mp3');
-                     audio.play();
+                    var audio3 = new Audio('tiktik.mp3');
+                    audio3.play();
                 }
                 if(tcount>=0)   {
                 maintimer.innerHTML=tcount
                 tcount-=1
                 }
                 else{
-                    var audio = new Audio('beep-02.mp3');
-                     audio.play();
+                    var audio4 = new Audio('beep-02.mp3');
+                     audio4.play();
                      clearInterval(inter)
                      start.disabled=false
                      stop.disabled=false
@@ -124,9 +124,9 @@
 
         var stop=document.getElementById("stop")
         stop.addEventListener("click",function(){
-            var audio = new Audio('stopbeep.mp3');
+            var audio5 = new Audio('stopbeep.mp3');
             navigator.vibrate(200);
-            audio.play();
+            audio5.play();
             clearInterval(inter)
             start.disabled=false
             stop.disabled=true
