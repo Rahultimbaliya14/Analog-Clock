@@ -11,7 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 50%;
+    top: 55%;
     height: 170px;
     width: 500px;
     background-color:  rgba(0, 0, 0, 0.8);
@@ -40,7 +40,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 39%;
+    top: 33%;
     height: 60px;
     width: 500px;
     background-color:  rgba(0, 0, 0, 0.8);
@@ -68,4 +68,20 @@ body{
     font-weight: 500;
     font-size: 50px;
     color: white;
+}
+
+.container .center3{
+    position: fixed;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 45%;
+    height: 60px;
+    width: 500px;
+    background-color:  rgba(0, 0, 0, 0.8);
+    margin-top: -180px;
+    border-radius: 4px;
+    color: black;
+    margin-left: -250px;
 }
