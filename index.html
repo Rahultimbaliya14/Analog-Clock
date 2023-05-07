@@ -36,11 +36,12 @@
             <div class="first">
               <h3 id="timer">1</h3>
               <h3><i class="fa fa-plus" id="plus" style="font-size: 30px;     "></i></h3>
-              <input type="submit" value="Start" id="start">
+              <input type="submit" value="Start" id="start" style="background-color: lightgreen;">
+              <input type="submit" value="Stop" id="stop" style="background-color: lightskyblue;">
               <input type="submit" value="Reset" id="reset">
             </div>
             <div class="second">
-                 <h3 id="maintimer">helo</h3>
+                 <h3 id="maintimer">0</h3>
             </div>
        </div>
         
@@ -48,7 +49,7 @@
     <script>
 
         
-
+         
          var maintimer=document.getElementById("maintimer")
          var timer=document.getElementById("timer")
          var plus=document.getElementById("plus")
@@ -56,15 +57,20 @@
             var get=parseInt(timer.innerHTML)
             var set=get+=1
             timer.innerHTML=set
+            
          })
 
 
+
+         var tcount=0
          var start=document.getElementById("start")
          start.addEventListener("click",function(){
             var get=parseInt(timer.innerHTML)
-            var tcount=get*60
+             if(tcount==0){
+             tcount=get*60
+             }
             inter=setInterval(function(){
-                if(tcount>=0){
+                if(tcount>=0)   {
                 maintimer.innerHTML=tcount
                 tcount-=1
                 }
@@ -73,13 +79,32 @@
                      audio.play();
                     clearInterval(inter)
                 }
+                var randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+                maintimer.style.background="#"+randomColor
+                var randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+                maintimer.style.color="#"+randomColor2
             },1000)
          })
+
+
 
          var reset=document.getElementById("reset")
          reset.addEventListener("click",function(){
             timer.innerText=1
+            tcount=0
+            maintimer.innerHTML=tcount
+            clearInterval(inter)
+            maintimer.style.background="white"
+            maintimer.style.color="black"
          })
+
+        var stop=document.getElementById("stop")
+        stop.addEventListener("click",function(){
+            clearInterval(inter)
+            maintimer.style.background="black"
+            maintimer.style.color="white"
+        })
 
 
 
