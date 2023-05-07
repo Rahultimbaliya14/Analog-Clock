@@ -5,6 +5,9 @@
 body{
     font-family: myFirstFont;
 }
+.container{
+   
+}
 .container .center{
     position: fixed;
     left: 50%;
@@ -121,6 +124,7 @@ body{
     margin-left: 10px;
     border: none;
     width: 65px;
+    cursor: pointer;
     height: 40px;
     border-radius: 7px;
     font-family: myFirstFont;

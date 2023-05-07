@@ -64,7 +64,10 @@
 
          var tcount=0
          var start=document.getElementById("start")
+         
          start.addEventListener("click",function(){
+            start.disabled=true
+            stop.disabled=false
             var get=parseInt(timer.innerHTML)
              if(tcount==0){
              tcount=get*60
@@ -91,6 +94,8 @@
 
          var reset=document.getElementById("reset")
          reset.addEventListener("click",function(){
+            start.disabled=false
+            stop.disabled=false
             timer.innerText=1
             tcount=0
             maintimer.innerHTML=tcount
@@ -102,6 +107,8 @@
         var stop=document.getElementById("stop")
         stop.addEventListener("click",function(){
             clearInterval(inter)
+            start.disabled=false
+            stop.disabled=true
             maintimer.style.background="black"
             maintimer.style.color="white"
         })
@@ -124,7 +131,7 @@
             console.log(position)
             var minut=dt.getMinutes()
             var second=dt.getSeconds()
-            var hour=dt.getHours()
+            var hour=getspecific(dt.getHours())
             var day=dt.getDate()
             var month=dt.getMonth()
             var year=dt.getFullYear()
@@ -195,6 +202,50 @@
             }
             else{
                 daytext="Saturday"
+            }
+            return daytext
+        }
+
+
+
+
+        function getspecific(n){
+            var daytext
+            if(n==13){
+                daytext="1"
+            }
+            else if(n==14){
+                daytext="2"
+            }
+            else if(n==15){
+                daytext="3"
+            }
+            else if(n==16){
+                daytext="4"
+            }
+            else if(n==17){
+                daytext="5"
+            }
+            else if(n==18){
+                daytext="6"
+            }
+            else if(n==19){
+                daytext="7"
+            }
+            else if(n==20){
+                daytext="8"
+            }
+            else if(n==21){
+                daytext="9"
+            }
+            else if(n==22){
+                daytext="10"
+            }
+            else if(n==23){
+                daytext="11"
+            }
+            else{
+                daytext="12"
             }
             return daytext
         }
