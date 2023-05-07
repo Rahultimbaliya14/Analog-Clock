@@ -16,7 +16,7 @@
             <h2>-</h2>
             <h3 id="year">Year</h3>
         </div>
-        <div class="center3">
+        <div class="center3" id="center3" >
             <h3 id="daytext" style="width: 200px;">Day</h3>
             
         </div>
@@ -70,18 +70,29 @@
 
         },1000)
     
+
+        var daycolor=document.getElementById("day")
+        var yearcolor=document.getElementById("year")
         var minut2=document.getElementById("minut")
         var second2=document.getElementById("second")
+        var color=document.getElementById("center3")
+       
         setInterval(function(){
            var randomColor = Math.floor(Math.random()*16777215).toString(16);
               second2.style.color="#"+randomColor
+              year.style.color="#"+randomColor
               minut2.style.background="#"+randomColor
+              daycolor.style.background="#"+randomColor
+              color.style.background="#"+randomColor
+             
 
         },1000);
         setInterval(function(){
             var randomColor = Math.floor(Math.random()*16777215).toString(16);
                second2.style.background="#"+randomColor
+               yearcolor.style.background="#"+randomColor
                minut2.style.color="#"+randomColor
+               daycolor.style.color="#"+randomColor
          },1000);
         
 
