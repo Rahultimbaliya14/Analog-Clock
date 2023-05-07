@@ -51,7 +51,7 @@ body{
     color: black;
     margin-left: -250px;
 }
-.container .center1 h3 ,.center3 h3{
+.container .center1 h3 ,.center3 h3 {
    margin-right: 20px;
    width: 80px;
    font-weight: 1000;
@@ -93,3 +93,57 @@ body{
     font-size: 50px;
     color: white;
 }
+
+.container .center4{
+    position: fixed;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    top: 90%;
+    height: 160px;
+    width: 500px;
+    background-color:  rgba(0, 0, 0, 0.8);
+    margin-top: -180px;
+    border-radius: 7px;
+    color: black;
+    margin-left: -250px;
+}
+.first{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+.first input{
+    margin-left: 10px;
+    border: none;
+    width: 65px;
+    height: 40px;
+    border-radius: 7px;
+    font-family: myFirstFont;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: lightcoral;
+}
+.second{
+ margin-top: -30px;
+}  
+
+.container .center4 h3{
+    margin-right: 20px;
+    width: 80px;
+    font-weight: 1000;
+    font-size: 35px;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 20px;
+    transition: ease-in .50s;
+ }
+
