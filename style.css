@@ -4,6 +4,7 @@
 }
 body{
     font-family: myFirstFont;
+    transition: ease-in-out .50s;
 }
 .texttitle{
     text-align: center;
