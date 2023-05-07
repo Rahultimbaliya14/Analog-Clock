@@ -5,27 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Analog-Clock Rahul-Timbaliya</title>
 </head>
 <body>
     <div class="container">
         <div class="center">
-             <h3 id="hour">..</h3>
-             <h3 id="minut">..</h3>
-             <h3 id="second">..</h3>
+             <h3 id="hour"></h3>
+             <h2 >:</h2>
+             <h3 id="minut"></h3>
+             <h2 >:</h2>
+             <h3 id="second"></h3>
+             <h2 >:</h2>
+             <h3 id="ampm"></h3>
         </div>
     </div>
     <!-- <h1 id="date"></h1> -->
     <script>
         setInterval(function(){
             var dt = new Date()
+            var ampm=""
+            d = dt.toLocaleTimeString()
+            let position = d.search("AM");
+
+            if(position !=-1){
+                ampm="AM"
+            }
+            else{
+                ampm="PM"
+            }
+            console.log(d)
+            console.log(position)
             var minut=dt.getMinutes()
             var second=dt.getSeconds()
             var hour=dt.getHours()
+           
 
             var hour=document.getElementById("hour").innerHTML=hour
             var minut=document.getElementById("minut").innerHTML=minut
             var second=document.getElementById("second").innerHTML=second   
+            var second=document.getElementById("ampm").innerHTML=ampm   
             
         },1000)
        
