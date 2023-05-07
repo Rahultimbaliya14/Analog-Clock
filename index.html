@@ -86,7 +86,9 @@
                 else{
                     var audio = new Audio('beep-02.mp3');
                      audio.play();
-                    clearInterval(inter)
+                     start.disabled=false
+                     stop.disabled=false
+                     clearInterval(inter)
                 }
                 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 
