@@ -11,11 +11,13 @@
     <div class="container">
         <div class="center1">
             <h3 id="day">Day</h3>
+            <h2>-</h2>
             <h3 id="month">Month</h3>
+            <h2>-</h2>
             <h3 id="year">Year</h3>
         </div>
         <div class="center3">
-            <h3 id="day">Day</h3>
+            <h3 id="daytext" style="width: 200px;">Day</h3>
             
         </div>
         <div class="center">
@@ -51,7 +53,7 @@
             var day=dt.getDate()
             var month=dt.getMonth()
             var year=dt.getFullYear()
-            
+            var daytexttr=getdaytext(dt.getDay())
            
 
             var hour=document.getElementById("hour").innerHTML=hour
@@ -62,9 +64,38 @@
             var daytext=document.getElementById("day").innerHTML=day    
             var monthtext=document.getElementById("month").innerHTML=month    
             var yeartext=document.getElementById("year").innerHTML=year         
+            var daytextt=document.getElementById("daytext").innerHTML=daytexttr        
             
         },1000)
        
+
+
+
+        function getdaytext(n){
+            var daytext
+            if(n==0){
+                daytext="Sunday"
+            }
+            else if(n==1){
+                daytext="Monday"
+            }
+            else if(n==2){
+                daytext="Tuesday"
+            }
+            else if(n==3){
+                daytext="Wednesday"
+            }
+            else if(n==4){
+                daytext="Thursday"
+            }
+            else if(n==5){
+                daytext="Friday"
+            }
+            else{
+                daytext="Saturday"
+            }
+            return daytext
+        }
     </script>
 </body>
 </html>
