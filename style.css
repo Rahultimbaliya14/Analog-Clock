@@ -34,9 +34,7 @@ body{
    transition: .50s;
 }
 
-.container .center h3::after{
-    
-}
+
 
 .container .center h2{
     font-weight: 500;
