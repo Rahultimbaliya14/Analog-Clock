@@ -72,6 +72,8 @@
          var start=document.getElementById("start")
          
          start.addEventListener("click",function(){
+            var audio = new Audio('letsgo.mp3');
+            audio.play();
             navigator.vibrate(200);
             start.disabled=true
             stop.disabled=false
@@ -121,6 +123,8 @@
 
         var stop=document.getElementById("stop")
         stop.addEventListener("click",function(){
+            var audio = new Audio('stopbeep.mp3');
+            audio.play();
             clearInterval(inter)
             start.disabled=false
             stop.disabled=true
